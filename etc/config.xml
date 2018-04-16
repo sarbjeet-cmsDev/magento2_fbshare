@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <fbshare>
+            <general>
+                <enabled>0</enabled>
+                <discount_title>Facebook Discount</discount_title>
+            </general>
+            <product_share>
+                <discount_rate>10</discount_rate>
+                <discount_msg>Share this product and get 10% discount</discount_msg>
+                <discount_type>0</discount_type>
+                <discount_uses>3</discount_uses>
+            </product_share>
+        </fbshare>
+    </default>
+</config>

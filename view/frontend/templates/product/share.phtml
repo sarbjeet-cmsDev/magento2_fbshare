@@ -1,0 +1,28 @@
+<p id="facebook_share_discount_block" data-bind="scope: 'facebookShareDiscount'">
+    <?= $block->escapeHtml($block->getDiscountMessage()) ?>
+    <button id='fbshare' data-bind="click: shareProduct" class="action primary">
+        <span>Share on Facebook</span>
+    </button>
+</p>
+<script type="text/x-magento-init">
+    {
+        "#facebook_share_discount_block": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "facebookShareDiscount": {
+                        "component": "Expert_FbShare/js/facebook-discount",
+                        "config": {
+                            "appId": "<?= $block->escapeHtml($block->getFbAppID()) ?>",
+                            "product_id": "<?= $block->escapeHtml($block->getProduct()->getId()) ?>",
+                            "product_url": "<?= $block->escapeHtml($block->getProduct()->getProductUrl()) ?>",
+                            "url": "<?= $block->escapeHtml($block->getUrl('fbshare')) ?>"
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+
+
